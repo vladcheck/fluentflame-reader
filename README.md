@@ -46,28 +46,50 @@ You can also help internationalize the app by providing [translations into addit
 Refer to the repo of [react-intl-universal](https://github.com/alibaba/react-intl-universal) to get started on internationalization. 
 
 ### Build from source
+
+#### npm
+
 ```bash
-# Install dependencies
-npm install
-
-# Compile ts & dependencies
-npm run build
-
-# Start the application
-npm run electron
+npm install # Install dependencies
+npm run build # Compile ts & dependencies
+npm run electron # Start the application
 
 # Generate certificate for signature
 electron-builder create-self-signed-cert
+
 # Package the app for Windows
-npm run package-win
+npm run package-win 
+```
+
+#### pnpm
+
+```bash
+pnpm install # Install dependencies
+pnpm approve-packages # Approve packages, otherwise electron will fail
+pnpm build # Compile ts & dependencies
+pnpm electron # Start the application
+
+# Generate certificate for signature
+electron-builder create-self-signed-cert
+
+# Package the app for Windows
+pnpm package-win 
 ```
 
 ### Run Tests
 
+#### npm
+
+```bash
+pnpm install # Install dependencies if not done prior
+pnpm run test # Run tests
+```
+### pnpm
+
 ```bash
 # Install dependencies
-npm install
-npm run test
+pnpm install # Install dependencies if not done prior
+pnpm run test # Run tests
 ```
 
 ### Developed with
